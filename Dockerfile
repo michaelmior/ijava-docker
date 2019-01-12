@@ -26,9 +26,6 @@ RUN adduser --disabled-password \
     --uid $NB_UID \
     $NB_USER
 
-COPY . $HOME
-RUN chown -R $NB_UID $HOME
-
 USER $NB_USER
 
 # Launch the notebook server
